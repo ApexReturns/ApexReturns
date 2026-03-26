@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html>
-<body style="background:black; color:white; text-align:center;">
+<head>
+  <title>ApexReturns</title>
 
-<h2>Welcome to ApexReturns 🔥</h2>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
 
-<p>Select your plan</p>
+    h1 {
+      font-size: 40px;
+      color: white;
+    }
 
-<div onclick="goPlan(5000)">₹5000 Plan</div>
-<div onclick="goPlan(7000)">₹7000 Plan</div>
-<div onclick="goPlan(14000)">₹14000 Plan</div>
+    .highlight {
+      color: red;
+    }
+
+    .btn {
+      background: red;
+      padding: 12px 25px;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    .plans {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      border: 2px solid red;
+      border-radius: 15px;
+      padding: 20px;
+      background: #111;
+      box-shadow: 0 0 15px red;
+    }
+
+    .price {
+      font-size: 30px;
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>MAXIMIZE YOUR <span class="highlight">EARNINGS</span></h1>
+
+<button class="btn">GET STARTED</button>
+
+<h2>Choose Your Plan</h2>
+
+<div class="plans">
+
+  <div class="card">
+    <div class="price">₹5000</div>
+    <p>Earn ₹45,000 in 7 Days</p>
+    <button class="btn" onclick="goPlan(5000)">SELECT PLAN</button>
+  </div>
+
+  <div class="card">
+    <div class="price">₹7000</div>
+    <p>Earn ₹75,000 in 14 Days</p>
+    <button class="btn" onclick="goPlan(7000)">SELECT PLAN</button>
+  </div>
+
+  <div class="card">
+    <div class="price">₹14000</div>
+    <p>Earn ₹145,000 in 9 Days</p>
+    <button class="btn" onclick="goPlan(14000)">SELECT PLAN</button>
+  </div>
+
+</div>
 
 <script>
 function goPlan(plan){

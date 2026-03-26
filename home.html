@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black; color:white; text-align:center;">
+
+<h2>Welcome to ApexReturns 🔥</h2>
+
+<p>Select your plan</p>
+
+<div onclick="goPlan(5000)">₹5000 Plan</div>
+<div onclick="goPlan(7000)">₹7000 Plan</div>
+<div onclick="goPlan(14000)">₹14000 Plan</div>
+
+<script>
+function goPlan(plan){
+  localStorage.setItem("plan", plan);
+  window.location = "plan.html";
+}
+</script>
+
+</body>
+</html>

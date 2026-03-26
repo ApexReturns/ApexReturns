@@ -1,93 +1,147 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ApexReturns</title>
+<title>ApexReturns</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: black;
-      color: white;
-      font-family: Arial;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background: radial-gradient(circle at top,#1a0000,black);
+  color:white;
+}
 
-    h1 {
-      font-size: 40px;
-      color: white;
-    }
+/* NAVBAR */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:black;
+  border-bottom:1px solid red;
+}
+.logo{
+  color:red;
+  font-size:22px;
+  font-weight:bold;
+}
+.nav button{
+  background:red;
+  border:none;
+  color:white;
+  padding:8px 15px;
+  border-radius:6px;
+}
 
-    .highlight {
-      color: red;
-    }
+/* HERO */
+.hero{
+  text-align:center;
+  padding:40px 20px;
+}
+.hero h1{
+  font-size:36px;
+}
+.hero span{
+  color:red;
+}
+.hero button{
+  margin-top:15px;
+  padding:12px 25px;
+  background:linear-gradient(red,darkred);
+  border:none;
+  color:white;
+  border-radius:10px;
+  box-shadow:0 0 20px red;
+}
 
-    .btn {
-      background: red;
-      padding: 12px 25px;
-      border: none;
-      color: white;
-      font-size: 18px;
-      border-radius: 8px;
-      margin: 10px;
-    }
+/* PLANS */
+.plans{
+  padding:20px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
 
-    .plans {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-    }
+.card{
+  background:#0d0d0d;
+  border-radius:20px;
+  padding:20px;
+  border:2px solid red;
+  box-shadow:0 0 25px red;
+  text-align:center;
+}
 
-    .card {
-      border: 2px solid red;
-      border-radius: 15px;
-      padding: 20px;
-      background: #111;
-      box-shadow: 0 0 15px red;
-    }
+.card img{
+  width:100%;
+  border-radius:10px;
+}
 
-    .price {
-      font-size: 30px;
-      color: red;
-    }
+.price{
+  font-size:28px;
+  color:red;
+  margin-top:10px;
+}
 
-  </style>
+.earn{
+  margin:10px 0;
+  font-size:18px;
+}
+
+.btn{
+  background:linear-gradient(red,darkred);
+  padding:10px 20px;
+  border:none;
+  color:white;
+  border-radius:8px;
+  box-shadow:0 0 15px red;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>MAXIMIZE YOUR <span class="highlight">EARNINGS</span></h1>
+<div class="nav">
+  <div class="logo">ApexReturns</div>
+  <button>Login</button>
+</div>
 
-<button class="btn">GET STARTED</button>
-
-<h2>Choose Your Plan</h2>
+<div class="hero">
+  <h1>MAXIMIZE YOUR <span>EARNINGS</span></h1>
+  <p>Grow your profits with ApexReturns</p>
+  <button>GET STARTED</button>
+</div>
 
 <div class="plans">
 
-  <div class="card">
-    <div class="price">₹5000</div>
-    <p>Earn ₹45,000 in 7 Days</p>
-    <button class="btn" onclick="goPlan(5000)">SELECT PLAN</button>
-  </div>
+<h2 style="text-align:center;">CHOOSE YOUR PLAN</h2>
 
-  <div class="card">
-    <div class="price">₹7000</div>
-    <p>Earn ₹75,000 in 14 Days</p>
-    <button class="btn" onclick="goPlan(7000)">SELECT PLAN</button>
-  </div>
+<div class="card">
+  <img src="https://i.imgur.com/8Km9tLL.png">
+  <div class="price">₹5000</div>
+  <div class="earn">Earn ₹45,000 in 7 Days</div>
+  <button class="btn" onclick="goPlan(5000)">SELECT PLAN</button>
+</div>
 
-  <div class="card">
-    <div class="price">₹14000</div>
-    <p>Earn ₹145,000 in 9 Days</p>
-    <button class="btn" onclick="goPlan(14000)">SELECT PLAN</button>
-  </div>
+<div class="card">
+  <img src="https://i.imgur.com/8Km9tLL.png">
+  <div class="price">₹7000</div>
+  <div class="earn">Earn ₹75,000 in 14 Days</div>
+  <button class="btn" onclick="goPlan(7000)">SELECT PLAN</button>
+</div>
+
+<div class="card">
+  <img src="https://i.imgur.com/8Km9tLL.png">
+  <div class="price">₹14000</div>
+  <div class="earn">Earn ₹145,000 in 9 Days</div>
+  <button class="btn" onclick="goPlan(14000)">SELECT PLAN</button>
+</div>
 
 </div>
 
 <script>
 function goPlan(plan){
   localStorage.setItem("plan", plan);
-  window.location = "plan.html";
+  window.location="plan.html";
 }
 </script>
 

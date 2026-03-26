@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ApexReturns</title>
+</head>
+<body style="background:black; color:white; text-align:center;">
+
+<h2>ApexReturns 🔥</h2>
+
+<input id="email" placeholder="Email"><br><br>
+<input id="pass" type="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+function login(){
+  if(email.value && pass.value){
+    localStorage.setItem("login","true");
+    window.location="home.html";
+  } else {
+    alert("Enter details");
+  }
+}
+</script>
+
+</body>
+</html>

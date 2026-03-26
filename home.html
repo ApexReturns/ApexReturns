@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ApexReturns</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  color:white;
+  background:url('https://cdn.pixabay.com/photo/2018/01/18/07/31/bitcoin-3089728_1280.jpg') no-repeat center/cover;
+}
+
+/* overlay dark */
+.overlay{
+  background:rgba(0,0,0,0.8);
+  min-height:100vh;
+}
+
+/* navbar */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  border-bottom:1px solid red;
+}
+.logo{
+  color:red;
+  font-size:22px;
+  font-weight:bold;
+}
+.nav button{
+  background:red;
+  border:none;
+  color:white;
+  padding:8px 15px;
+  border-radius:6px;
+  box-shadow:0 0 10px red;
+}
+
+/* hero */
+.hero{
+  text-align:center;
+  padding:50px 20px;
+}
+.hero h1{
+  font-size:34px;
+}
+.hero span{
+  color:red;
+}
+.hero button{
+  margin-top:15px;
+  padding:12px 25px;
+  background:linear-gradient(red,darkred);
+  border:none;
+  color:white;
+  border-radius:10px;
+  box-shadow:0 0 20px red;
+}
+
+/* plans */
+.plans{
+  padding:20px;
+}
+
+.cards{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.card{
+  background:rgba(0,0,0,0.9);
+  border-radius:20px;
+  border:2px solid red;
+  box-shadow:0 0 25px red;
+  padding:20px;
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.price{
+  font-size:28px;
+  color:red;
+}
+
+.earn{
+  margin:10px 0;
+}
+
+.btn{
+  background:linear-gradient(red,darkred);
+  padding:10px 20px;
+  border:none;
+  color:white;
+  border-radius:8px;
+  box-shadow:0 0 15px red;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="nav">
+  <div class="logo">ApexReturns</div>
+  <button>Login</button>
+</div>
+
+<div class="hero">
+  <h1>MAXIMIZE YOUR <span>EARNINGS</span></h1>
+  <p>Grow your profits with ApexReturns</p>
+  <button>GET STARTED</button>
+</div>
+
+<div class="plans">
+
+<h2 style="text-align:center;">CHOOSE YOUR PLAN</h2>
+
+<div class="cards">
+
+<div class="card">
+  <img src="https://cdn.pixabay.com/photo/2017/10/31/00/03/coins-2902878_1280.jpg">
+  <div class="price">₹5000</div>
+  <div class="earn">Earn ₹45,000 in 7 Days</div>
+  <button class="btn" onclick="goPlan(5000)">SELECT PLAN</button>
+</div>
+
+<div class="card">
+  <img src="https://cdn.pixabay.com/photo/2017/10/31/00/03/coins-2902878_1280.jpg">
+  <div class="price">₹7000</div>
+  <div class="earn">Earn ₹75,000 in 14 Days</div>
+  <button class="btn" onclick="goPlan(7000)">SELECT PLAN</button>
+</div>
+
+<div class="card">
+  <img src="https://cdn.pixabay.com/photo/2017/10/31/00/03/coins-2902878_1280.jpg">
+  <div class="price">₹14000</div>
+  <div class="earn">Earn ₹145,000 in 9 Days</div>
+  <button class="btn" onclick="goPlan(14000)">SELECT PLAN</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+function goPlan(plan){
+  localStorage.setItem("plan",plan);
+  window.location="plan.html";
+}
+</script>
+
+</body>
+  </html>
